@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  CRUD APPLICATION con MONGODB - Prima parte
+<ul class="sampledb">
+    <% for(var i=0; i<sampledb.length; i++) {%>
+      <li class="sampledb">
+        <span><%= sampledb[i].name %></span>
+        <span><%= sampledb[i].surname %></span>
+        <span><%= sampledb[i].nickname %></span>       
+      </li>
+    <% } %>
+  </ul>
+  <form action="/insert" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="surname" name="surname">
+    <input type="text" placeholder="nickname" name="nickname">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
