@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const filter = {
   'name': new RegExp('paper')
 };
-var url = "mongodb://ennio:ennio@localhost:27017/sampledb";
+var url = "mongodb://ennio:ennio@127.0.0.1:27017/sampledb";
 MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
   db = database.db("sampledb"); // whatever your database name is
