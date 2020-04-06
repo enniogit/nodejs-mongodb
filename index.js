@@ -16,8 +16,8 @@ console.log(url);
 MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
   db = database.db("sampledb"); // whatever your database name is
-  app.listen(3000, () => {
-  console.log('listening on 3000')}
+  app.listen(8080, () => {
+  console.log('listening on 8080')}
 )});
 app.get('/', (req, res) => {
   db.collection('sampledb').find().toArray(function(err, results) {
