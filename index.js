@@ -17,7 +17,7 @@ MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
   db = database.db("sampledb"); // whatever your database name is
   app.listen(8080, () => {
-  console.log('listening on 8080')}
+  console.log('listening on 8080 webhook test')}
 )});
 app.get('/', (req, res) => {
   db.collection('sampledb').find().toArray(function(err, results) {
