@@ -12,6 +12,7 @@ const filter = {
   'name': new RegExp('paper')
 };
 var url = "mongodb://ennio:ennio@172.30.45.178:27017/sampledb";
+console.log(url);
 MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
   db = database.db("sampledb"); // whatever your database name is
