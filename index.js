@@ -61,11 +61,10 @@ const filter = {
 console.log(url);*/
 MongoClient.connect(mongoURL, (err, database) => { 
   if (err) return console.log(err);
-  /*db = database.db("sampledb"); // whatever your database name is*/
+  db = database.db(mongoDatabase); // whatever your database name is*/
   app.listen(8080, () => {
   console.log('listening on 8080 webhook test n3')}
 )});
-db = database.db(mongoDatabase);
 app.get('/', (req, res) => {
   db.collection('avengers').find().toArray(function(err, results) {
     if (err) return console.log(err);
