@@ -59,11 +59,11 @@ const filter = {
 };
 /*var url = "mongodb://mongouser:mongouser@172.30.45.178:27017/sampledb";
 console.log(url);*/
-MongoClient.connect(mongoURL, (err, database) => {
+MongoClient.connect(mongoURL, (err, database) => { 
   if (err) return console.log(err);
   db = database.db("sampledb"); // whatever your database name is
   app.listen(8080, () => {
-  console.log('listening on 8080 webhook test n2')}
+  console.log('listening on 8080 webhook test n3')}
 )});
 app.get('/', (req, res) => {
   db.collection('sampledb').find().toArray(function(err, results) {
