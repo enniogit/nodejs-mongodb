@@ -65,7 +65,7 @@ MongoClient.connect(mongoURL, (err, database) => {
   app.listen(8080, () => {
   console.log('listening on 8080 webhook test n3')}
 )});
-db = database;
+db = database.db(mongoDatabase);
 app.get('/', (req, res) => {
   db.collection('avengers').find().toArray(function(err, results) {
     if (err) return console.log(err);
